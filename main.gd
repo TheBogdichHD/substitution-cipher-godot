@@ -5,10 +5,70 @@ extends Control
 @onready var processed_text: TextEdit = %ProcessedText
 @onready var option_button: OptionButton = %OptionButton
 
-var russian_default_table := FileAccess.open("res://russian_default_table.txt", FileAccess.READ).get_as_text()
-var english_default_table := FileAccess.open("res://english_default_table.txt", FileAccess.READ).get_as_text()
-
 var substitutions: Dictionary
+
+var english_default_table = "A -> A
+B -> B
+C -> C
+D -> D
+E -> E
+F -> F
+G -> G
+H -> H
+I -> I
+J -> J
+K -> K
+L -> L
+M -> M
+N -> N
+O -> O
+P -> P
+Q -> Q
+R -> R
+S -> S
+T -> T
+U -> U
+V -> V
+W -> W
+X -> X
+Y -> Y
+Z -> Z
+"
+
+var russian_default_table = "А -> А
+Б -> Б
+В -> В
+Г -> Г
+Д -> Д
+Е -> Е
+Ё -> Ё
+Ж -> Ж
+З -> З
+И -> И
+Й -> Й
+К -> К
+Л -> Л
+М -> М
+Н -> Н
+О -> О
+П -> П
+Р -> Р
+С -> С
+Т -> Т
+У -> У
+Ф -> Ф
+Х -> Х
+Ц -> Ц
+Ч -> Ч
+Ш -> Ш
+Щ -> Щ
+Ъ -> Ъ
+Ы -> Ы
+Ь -> Ь
+Э -> Э
+Ю -> Ю
+Я -> Я
+"
 
 func _ready() -> void:
 	_on_russian_default_pressed()
